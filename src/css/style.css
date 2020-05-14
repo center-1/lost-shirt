@@ -1,6 +1,23 @@
-html,
-body {
-  height: 100%;
+@font-face {
+    font-family: 'Alegreya';
+    src: url('../fonts/AlegreyaSansSC-Black.woff2') format('woff2'),
+        url('../fonts/AlegreyaSansSC-Black.woff') format('woff');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: 
+        url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Yanone Kaffeesatz';
+    src: 
+        url('../fonts/YanoneKaffeesatz-Regular.woff2') format('woff2'),
+        url('../fonts/YanoneKaffeesatz-Regular.woff') format('woff'),
+        url('../fonts/YanoneKaffeesatz-Bold.woff2') format('woff2'),
+        url('../fonts/YanoneKaffeesatz-Bold.woff') format('woff');
 }
 :root {
   --black: #1b1b1b;
@@ -8,9 +25,10 @@ body {
   --red: #d82727;
   --titleFont: 'Yanone Kaffeesatz', Arial, sans-serif;
 }
-.reset-list {
-  margin: 0;
-  padding: 0;
+
+html,
+body {
+  height: 100%;
 }
 body {
   font: 16px / 1.42 "Roboto", Arial, sans-serif;
@@ -19,7 +37,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 */
 }
-
+.reset-list {
+  margin: 0;
+  padding: 0;
+}
 .wrapper {
   width: 1310px;
   margin: 0 auto; 
@@ -232,5 +253,63 @@ body {
   background: var(--red);
   color: #fff;
 }
+
+
+.collections {
+  margin-bottom: 120px;
+}
+
+.collections__list {
+  display: flex;
+  list-style: none;
+}
+.collections__item {
+  width: 630px;
+  min-height: 475px;
+  margin-right: 27px;
+}
+.collections__item--type-guys {
+  background: url(../img/collection_man.png) -154px -114px no-repeat,
+    url(../img/bg_collection.png) 64px -45px / contain;
+}
+.collections__item--type-girls {
+  background: url(../img/collection_woman.png) -148px -110px no-repeat,
+    url(../img/bg_collection.png) -226px -68px;
+}
+
+.collections__link {
+  display: inline-block;
+  padding: 70px 70px 0 270px;
+  text-decoration: none;
+}
+
+.collections__title {
+  font-family: var(--titleFont);
+  text-transform: uppercase;
+  font-size: 70px;
+  letter-spacing: 4px;
+  line-height: 1;
+  color: var(--black);
+  font-weight: 700;
+  margin: 0;
+}
+
+.collection__desc {
+  font-size: 15px;
+  line-height: 22px;  /* 1,46 */
+  color: #1b1b1b;
+}
+
+.b11tn {  /* МОДИФИКАТОР  */
+  font-family: var(--titleFont);
+  font-size: 24px;
+  letter-spacing: 1px;
+  line-height: 20px;
+/*  color: #ffc92f;
+  font-weight: 700;
+  text-align: center;
+*/
+}
+
 
 
