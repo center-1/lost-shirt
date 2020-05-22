@@ -155,6 +155,9 @@ body {
   color: var(--yellow);
 }
 
+.products {
+  margin-bottom: 160px;
+}
 .products__list {
   display: flex;
   flex-wrap: wrap;
@@ -256,7 +259,7 @@ body {
 
 
 .collections {
-  margin-bottom: 120px;
+  margin-bottom: 135px;
 }
 
 .collections__list {
@@ -264,51 +267,267 @@ body {
   list-style: none;
 }
 .collections__item {
+/*  position: relative;
   width: 630px;
-  min-height: 475px;
+  min-height: 474px;
   margin-right: 27px;
+  z-index: 1;
+*/
+  position: relative;
+  min-height: 474px;
+  flex: 1;
+  margin-right: 30px;
+  overflow: hidden;
+  background: url("../img/bg_collection.png") center center / 500px;
 }
-.collections__item--type-guys {
-  background: url(../img/collection_man.png) -154px -114px no-repeat,
-    url(../img/bg_collection.png) 64px -45px / contain;
+
+.collections__item::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: -17%;
+  left: -17%;
+  /*top: 0;*/
+  /*left: 0;*/
+  width: 60%;
+  height: 176%;
+  background: center center / contain no-repeat;
+  /*z-index: -1;*/
 }
-.collections__item--type-girls {
-  background: url(../img/collection_woman.png) -148px -110px no-repeat,
-    url(../img/bg_collection.png) -226px -68px;
+.collections__item--type-guys::before {
+  background-image: url("../img/collection_man.png");
+}
+.collections__item--type-girls::before {
+  background-image: url("../img/collection_woman.png");
+  top: -31%;
+  left: -25%;
+  width: 80%;
+}
+
+
+.collections__item:last-child {
+  margin-right: 0;
 }
 
 .collections__link {
-  display: inline-block;
-  padding: 70px 70px 0 270px;
+/*  display: inline-block;
+  padding: 70px 58px 70px 280px;
   text-decoration: none;
+*/
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+
+  display: block;
+  padding: 74px 13% 74px 44%;
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
 }
 
+
+.collections__link:hover .btn {
+  background: var(--red);
+  color: #fff;
+}
+
+
+
+/* удалять */
+/*.collections__item--type-guys::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 366px;
+  height: 475px;
+  background: url("../img/collection_man.png") -105px -86px / cover no-repeat;
+  z-index: -1;
+}
+.collections__item--type-guys {
+  background: url("../img/bg_collection.png") 64px -45px / contain;
+}
+
+.collections__item--type-girls::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 366px;
+  height: 475px;
+  background: url("../img/collection_woman.png") -105px -86px / cover no-repeat;
+  z-index: -1;
+}
+.collections__item--type-girls {
+  background: url("../img/bg_collection.png") -226px -68px;
+}
+*//*  */ 
+
+
+/*
 .collections__title {
   font-family: var(--titleFont);
   text-transform: uppercase;
   font-size: 70px;
-  letter-spacing: 4px;
+  font-weight: 700;
+letter-spacing: 4px;
   line-height: 1;
   color: var(--black);
-  font-weight: 700;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .collection__desc {
   font-size: 15px;
-  line-height: 22px;  /* 1,46 */
+  line-height: 22px; 
   color: #1b1b1b;
+  margin-bottom: 20px;
 }
 
-.b11tn {  /* МОДИФИКАТОР  */
+.btn--collection {  
   font-family: var(--titleFont);
   font-size: 24px;
   letter-spacing: 1px;
   line-height: 20px;
-/*  color: #ffc92f;
+
+  padding: 2px 23px;
+  color: #ffc92f;
   font-weight: 700;
   text-align: center;
+
+}
+.btn--collection:hover {
+  background: var(--red);
+  color: #fff;
+}
 */
+
+/*
+<footer class="footer">
+  <div class="container footer__container">
+    <nav class="site-menu">
+      <ul class="site-menu__sections">
+        <li class="site-menu__col">
+          <h3 class="site-menu__title">Информация</h3>
+          <ul class="site-menu__list">
+            <li class="site-menu__item">
+              <a href="" class="site-menu__link">О магазине</a>
+*/
+
+.footer {
+  margin-bottom: 115px;
+} 
+.footer__container {
+  /*box-sizing: border-box;*/
+  /*padding: 0 100px;*/
+  width: 1105px;
+}
+.site-menu {
+  margin-bottom: 30px;
+}
+.site-menu__sections {
+  display: flex;
+  /*flex: 1;*/
+  justify-content: space-between;
+  list-style: none;
+}
+.site-menu__col {
+  margin-right: 20px;
+}
+.site-menu__col:last-child {
+  margin-right: 0;
+}
+.site-menu__title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: var(--titleFont);
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.site-menu__list {
+  list-style: none;
+}
+.site-menu__item {
+  margin-bottom: 15px;
+}
+.site-menu__link {
+  text-decoration: none;
+  font-size: 15px;
+  color: #737373;
+}
+.site-menu__link:hover {
+  color: var(--red);
+}
+
+.site-menu__text {
+  font-size: 15px;
+  color: var(--black);
+  margin-bottom: 30px;
+}
+.site-menu__text-row {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+
+
+.extras {
+  display: flex;
+  margin-bottom: 95px;
+}
+.extras__col {
+  flex: 1;
+  margin-right: 20px;  
+}
+.extras__col:last-child {
+  margin-right: 0;
+}
+.extras__best {
+  display: block;
+  padding: 39px 10%;
+  font-family: var(--titleFont);
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 1;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #232323;
+  text-align: center;
+}
+
+.extras__col-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: url("../img/bg_collection.png") center center / 500px;
+}
+.socials {
+  display: flex;
+  list-style: none;
+}
+
+.socials__item {
+  margin-right: 50px;
+}
+.socials__item:last-child {
+  margin-right: 0;
+}
+
+.socials__link {
+  display: block;
+  width: 38px;
+  height: 38px;
+}
+.socials__icon {
+  width: 100%;
+  height: 100%;
+}
+.socials__link:hover .socials__icon {
+  fill: var(--red);
 }
 
 
