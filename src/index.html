@@ -33,6 +33,62 @@
             </div>
           </div>
         </div>
+        <aside class="sidebar">
+          <a href="#hamburger-menu" class="sidebar__hamburger">
+            <svg class="sidebar__hamburger-icon">
+              <use xlink:href="icon/icons-sprite.svg#bars"></use>
+            </svg>
+          </a>
+          <div class="sidebar__header">
+            <a href="#logo" class="logo">
+              <img src="img/logo.png" class="logo__pic" alt="Lost shirt">
+            </a>
+            <a href="#close-sidebar" class="sidebar__close">
+              <svg class="sidebar__close-icon">
+                <use xlink:href="icon/icons-sprite.svg#cross"></use>
+              </svg>
+            </a>
+          </div>
+          <nav class="side-menu sidebar__menu">
+            <ul class="side-menu__list reset-list">
+              <li class="side-menu__item">
+                <a href="#kids_collections" class="side-menu__link">
+                  Детская коллекция
+                </a>
+              </li>
+              <li class="side-menu__item">
+                <a href="#man_collections" class="side-menu__link">
+                  Мужская коллекция
+                </a>
+              </li>
+              <li class="side-menu__item">
+                <a href="#woman_collections" class="side-menu__link">
+                  Женская коллекция
+                </a>
+              </li>
+              <li class="side-menu__item">
+                <a href="#popular_prints" class="side-menu__link">
+                  Популярные принты
+                </a>
+              </li>
+              <li class="side-menu__item">
+                <a href="#new_prints" class="side-menu__link">
+                  Новые принты
+                </a>
+              </li>
+              <li class="side-menu__item">
+                <a href="#special_offers" class="side-menu__link">
+                  Специальные предложения
+                </a>
+              </li>
+              <li class="side-menu__item">
+                <a href="#coming_soon" class="side-menu__link">
+                  Скоро в продаже
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
       </section>
       
       <section class="products">
@@ -54,7 +110,6 @@
               <a href="#" class="filter__link">Скоро в продаже</a>
             </li>
           </ul>
-          
           <ul class="products__list reset-list">
             <li class="products__item">
               <div class="products__price">
@@ -223,7 +278,6 @@
               </li>
               <li class="site-menu__col">
                 <h3 class="site-menu__title">Контактная информация</h3>
-
                 <div class="site-menu__text">
                   Санкт-Петерубрг,<br>
                   ул. Жуковского, д.12
@@ -247,28 +301,28 @@
               <div href="#" class="extras__col-socials">
                 <ul class="socials reset-list">
                   <li class="socials__item">
-                    <a href="#" class="socials__link">
+                    <a href="#facebook" class="socials__link">
                       <svg class="socials__icon">
                         <use xlink:href="icon/icons-sprite.svg#fb"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="socials__item">
-                    <a href="#" class="socials__link">
+                    <a href="#twitter" class="socials__link">
                       <svg class="socials__icon">
                         <use xlink:href="icon/icons-sprite.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="socials__item">
-                    <a href="#" class="socials__link">
+                    <a href="#instagram" class="socials__link">
                       <svg class="socials__icon">
                         <use xlink:href="icon/icons-sprite.svg#insta"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="socials__item">
-                    <a href="#" class="socials__link">
+                    <a href="#pinterest" class="socials__link">
                       <svg class="socials__icon">
                         <use xlink:href="icon/icons-sprite.svg#pin"></use>
                       </svg>
@@ -277,13 +331,14 @@
                 </ul>
               </div>
             </div>
-
           </section>
+
         </div>
       </footer>
-
     </div>
 
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+    <script src="scripts/sidebar-menu.js"></script>
   </body>
 </html>

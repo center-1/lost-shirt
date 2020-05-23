@@ -25,7 +25,6 @@
   --red: #d82727;
   --titleFont: 'Yanone Kaffeesatz', Arial, sans-serif;
 }
-
 html,
 body {
   height: 100%;
@@ -51,10 +50,8 @@ body {
   height: 100vh;
   min-height: 650px;
   background: url("../img/bg_hero.jpg") center center / cover no-repeat;
-
   margin-bottom: 130px;
 }
-
 .header {
   width: 1290px;
   margin: 0 auto;
@@ -116,7 +113,90 @@ body {
 .lined-text__word:nth-child(2n) {
   margin-left: 8px;
 }
-
+.sidebar {
+  width: 75px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #212121;
+  transition: width 0.4s;
+}
+.sidebar__hamburger {
+  display: block;
+  position: absolute;
+  top: 27px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.sidebar__hamburger-icon {
+  width: 29px;
+  height: 29px;
+  fill: var(--yellow);
+}
+.sidebar--opened {
+  width: 325px;
+  padding: 0 3% 0 4%;  
+}
+.sidebar--opened .sidebar__hamburger {
+  display: none;
+}
+.sidebar__menu {
+  position: absolute;
+  left: -500px;
+  transition: left .4s;
+}
+.sidebar--opened .sidebar__menu {
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition-delay: .2s;
+}
+.sidebar--opened .sidebar__header {
+  display: flex;
+}
+.sidebar__header {
+  position: absolute;
+  top: 29px;
+  left: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+}
+.sidebar__close {
+  position: absolute;
+  top: -4px;
+  right: 23px;
+}
+.sidebar__close-icon {
+  width: 29px;
+  height: 29px;
+  fill: var(--yellow);
+}
+.side-menu {
+  text-align: center;
+}
+.side-menu__list {
+  list-style: none;
+}
+.side-menu__item {
+  margin-bottom: 20px;
+}
+.side-menu__link {
+  font-family: var(--titleFont);
+  font-size: 20px;
+  color: var(--yellow);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.side-menu__link:hover {
+  color: var(--red);
+}
 .products {
   margin-bottom: 80px;
 }
@@ -154,7 +234,6 @@ body {
   background-color: var(--black);
   color: var(--yellow);
 }
-
 .products {
   margin-bottom: 160px;
 }
@@ -256,23 +335,14 @@ body {
   background: var(--red);
   color: #fff;
 }
-
-
 .collections {
   margin-bottom: 135px;
 }
-
 .collections__list {
   display: flex;
   list-style: none;
 }
 .collections__item {
-/*  position: relative;
-  width: 630px;
-  min-height: 474px;
-  margin-right: 27px;
-  z-index: 1;
-*/
   position: relative;
   min-height: 474px;
   flex: 1;
@@ -280,19 +350,15 @@ body {
   overflow: hidden;
   background: url("../img/bg_collection.png") center center / 500px;
 }
-
 .collections__item::before {
   position: absolute;
   display: block;
   content: "";
   top: -17%;
   left: -17%;
-  /*top: 0;*/
-  /*left: 0;*/
   width: 60%;
   height: 176%;
   background: center center / contain no-repeat;
-  /*z-index: -1;*/
 }
 .collections__item--type-guys::before {
   background-image: url("../img/collection_man.png");
@@ -303,121 +369,27 @@ body {
   left: -25%;
   width: 80%;
 }
-
-
 .collections__item:last-child {
   margin-right: 0;
 }
-
 .collections__link {
-/*  display: inline-block;
-  padding: 70px 58px 70px 280px;
-  text-decoration: none;
-*/
   position: relative;
   height: 100%;
   box-sizing: border-box;
-
   display: block;
   padding: 74px 13% 74px 44%;
   text-decoration: none;
   color: inherit;
   font-size: 15px;
 }
-
-
 .collections__link:hover .btn {
   background: var(--red);
   color: #fff;
 }
-
-
-
-/* удалять */
-/*.collections__item--type-guys::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 366px;
-  height: 475px;
-  background: url("../img/collection_man.png") -105px -86px / cover no-repeat;
-  z-index: -1;
-}
-.collections__item--type-guys {
-  background: url("../img/bg_collection.png") 64px -45px / contain;
-}
-
-.collections__item--type-girls::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 366px;
-  height: 475px;
-  background: url("../img/collection_woman.png") -105px -86px / cover no-repeat;
-  z-index: -1;
-}
-.collections__item--type-girls {
-  background: url("../img/bg_collection.png") -226px -68px;
-}
-*//*  */ 
-
-
-/*
-.collections__title {
-  font-family: var(--titleFont);
-  text-transform: uppercase;
-  font-size: 70px;
-  font-weight: 700;
-letter-spacing: 4px;
-  line-height: 1;
-  color: var(--black);
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.collection__desc {
-  font-size: 15px;
-  line-height: 22px; 
-  color: #1b1b1b;
-  margin-bottom: 20px;
-}
-
-.btn--collection {  
-  font-family: var(--titleFont);
-  font-size: 24px;
-  letter-spacing: 1px;
-  line-height: 20px;
-
-  padding: 2px 23px;
-  color: #ffc92f;
-  font-weight: 700;
-  text-align: center;
-
-}
-.btn--collection:hover {
-  background: var(--red);
-  color: #fff;
-}
-*/
-
-/*
-<footer class="footer">
-  <div class="container footer__container">
-    <nav class="site-menu">
-      <ul class="site-menu__sections">
-        <li class="site-menu__col">
-          <h3 class="site-menu__title">Информация</h3>
-          <ul class="site-menu__list">
-            <li class="site-menu__item">
-              <a href="" class="site-menu__link">О магазине</a>
-*/
-
 .footer {
   margin-bottom: 115px;
 } 
 .footer__container {
-  /*box-sizing: border-box;*/
-  /*padding: 0 100px;*/
   width: 1105px;
 }
 .site-menu {
@@ -425,7 +397,6 @@ letter-spacing: 4px;
 }
 .site-menu__sections {
   display: flex;
-  /*flex: 1;*/
   justify-content: space-between;
   list-style: none;
 }
@@ -458,7 +429,6 @@ letter-spacing: 4px;
 .site-menu__link:hover {
   color: var(--red);
 }
-
 .site-menu__text {
   font-size: 15px;
   color: var(--black);
@@ -470,9 +440,6 @@ letter-spacing: 4px;
   text-decoration: none;
   margin-bottom: 5px;
 }
-
-
-
 .extras {
   display: flex;
   margin-bottom: 95px;
@@ -497,7 +464,6 @@ letter-spacing: 4px;
   background-color: #232323;
   text-align: center;
 }
-
 .extras__col-socials {
   display: flex;
   justify-content: center;
@@ -509,14 +475,12 @@ letter-spacing: 4px;
   display: flex;
   list-style: none;
 }
-
 .socials__item {
   margin-right: 50px;
 }
 .socials__item:last-child {
   margin-right: 0;
 }
-
 .socials__link {
   display: block;
   width: 38px;
@@ -529,6 +493,4 @@ letter-spacing: 4px;
 .socials__link:hover .socials__icon {
   fill: var(--red);
 }
-
-
 
