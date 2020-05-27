@@ -1,13 +1,16 @@
 
-let menu_open = document.querySelector(".sidebar__hamburger");
-let menu_close = document.querySelector(".sidebar__close");
-let sidebar = document.querySelector(".sidebar");
+(function() {
 
-menu_open.addEventListener("click", function () {
-  sidebar.classList.add("sidebar--opened");
-});
+  const menuOpen = document.querySelector('.sidebar__hamburger'),
+        menuClose = document.querySelector('.sidebar__close'),
+        sidebar = document.querySelector('.sidebar');
 
-menu_close.addEventListener("click", function () {
-  sidebar.classList.remove("sidebar--opened");
-});
+  menuOpen.addEventListener('click', function () {
+    sidebar.classList.add('sidebar--opened');
+  });
 
+  menuClose.addEventListener('click', function () {
+    sidebar.classList.remove('sidebar--opened');
+  });
+
+})();
