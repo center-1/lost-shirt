@@ -111,23 +111,23 @@
         <div class="container">
           <ul class="filter reset-list">
             <li class="filter__item filter__item--active">
-              <a href="#" class="filter__link">Популярное</a>
+              <a href="#" data-filter="popular" class="filter__link">Популярное</a>
             </li>
             <li class="filter__item">
-              <a href="#" class="filter__link">Новинки</a>
+              <a href="#" data-filter="news" class="filter__link">Новинки</a>
             </li>
             <li class="filter__item">
-              <a href="#" class="filter__link">Бестселлеры</a>
+              <a href="#" data-filter="bestsellers" class="filter__link">Бестселлеры</a>
             </li>
             <li class="filter__item">
-              <a href="#" class="filter__link">Специальные предложения</a>
+              <a href="#" data-filter="special" class="filter__link">Специальные предложения</a>
             </li>
             <li class="filter__item">
-              <a href="#" class="filter__link">Скоро в продаже</a>
+              <a href="#" data-filter="soon" class="filter__link">Скоро в продаже</a>
             </li>
           </ul>
           <ul class="products__list reset-list">
-            <li class="products__item">
+            <li class="products__item news bestsellers">
               <div class="products__price">
                 <div class="products__price-amount">2 500</div>
               </div>
@@ -139,7 +139,7 @@
                 </div>                
               </div>
             </li>
-            <li class="products__item">
+            <li class="products__item news special">
               <div class="products__price">
                 <div class="products__price-amount">2 500</div>
               </div>
@@ -151,7 +151,7 @@
                 </div>                
               </div>
             </li>
-            <li class="products__item products__item--double-size products__item--color-black">
+            <li class="products__item news popular products__item--double-size products__item--color-black">
               <div class="products__price">
                 <div class="products__price-amount">2 500</div>
               </div>
@@ -163,7 +163,7 @@
                 </div>                
               </div>
             </li>
-            <li class="products__item products__item--double-size products__item--color-black">
+            <li class="products__item news popular special products__item--double-size products__item--color-black">
               <div class="products__price">
                 <div class="products__price-amount">2 500</div>
               </div>
@@ -175,7 +175,7 @@
                 </div>                
               </div>
             </li>
-            <li class="products__item">
+            <li class="products__item news soon">
               <div class="products__price">
                 <div class="products__price-amount">2 500</div>
               </div>
@@ -187,7 +187,7 @@
                 </div>                
               </div>
             </li>
-            <li class="products__item">
+            <li class="products__item news soon">
               <div class="products__price">
                 <div class="products__price-amount">2 500</div>
               </div>
@@ -353,10 +353,12 @@
       </footer>
     </div>
 
+    <script src="scripts/isotope.pkgd.min.js"></script>
     <script src="scripts/sidebar-menu.js"></script>
     <script src="scripts/fade-slider.js"></script>
+    <script src="scripts/filter.js"></script>
 
-    <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
   </body>
 </html>
