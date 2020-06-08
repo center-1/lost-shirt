@@ -13,4 +13,19 @@
     sidebar.classList.remove('sidebar--opened');
   });
 
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".sidebar")) {
+      sidebar.classList.remove("sidebar--opened");
+    }
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {	
+      if (sidebar.classList.contains("sidebar--opened")) { 
+        evt.preventDefault();	
+        sidebar.classList.remove("sidebar--opened");
+      }
+    }
+  });
+
 })();
